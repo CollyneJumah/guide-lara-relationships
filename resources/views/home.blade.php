@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-lg-10 offset-lg-1">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                   <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-grandFather" role="tab" aria-controls="nav-home" aria-selected="true">GRANDFANTERS</a>
@@ -16,7 +16,7 @@
                     @include('grandFathers.index')
                 </div>
                 <div class="tab-pane fade" id="nav-father" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    
+                    @include('fathers.index')
                 </div>
                 <div class="tab-pane fade" id="nav-son" role="tabpanel" aria-labelledby="nav-contact-tab">
                     

@@ -23,3 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // route resource for grandfather
 Route::resource('grand-fathers', App\Http\Controllers\GrandFatherController::class);
+Route::resource('fathers', App\Http\Controllers\FathersController::class);

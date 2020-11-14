@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\GrandFather;
-
+use App\Models\Fathers;
 class HomeController extends Controller
 {
     /**
@@ -25,8 +25,11 @@ class HomeController extends Controller
     public function index()
     {
 
-        //display grandfathers on homepage
+        //display grandfathers,fathers on homepage
         $showAllGrantFathers = GrandFather::OrderBy('created_at')->paginate(5);
-        return view('home', compact('showAllGrantFathers'));
+        $showAllFathers = Fathers::OrderBy('created_at')->paginate(5);
+
+        //display GrandFathers on select input 
+        return view('home', compact('showAllGrantFathers','showAllFathers'));
     }
 }
